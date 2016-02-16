@@ -91,7 +91,7 @@
     /*margin-top: 3px; */
 }
 .terminal .inverted, .cmd .inverted, .cmd .cursor.blink {
-    background-color: #aaa;
+    background-color: #00B200;
     color: #000;
 }
 .cmd .cursor.blink {
@@ -103,10 +103,10 @@
 @-webkit-keyframes terminal-blink {
   0%, 100% {
       background-color: #000;
-      color: #aaa;
+      color: #00B200;
   }
   50% {
-      background-color: #bbb;
+      background-color: #00B200;
       color: #000;
   }
 }
@@ -114,10 +114,10 @@
 @-ms-keyframes terminal-blink {
   0%, 100% {
       background-color: #000;
-      color: #aaa;
+      color: #00B200;
   }
   50% {
-      background-color: #bbb;
+      background-color: #00B200;
       color: #000;
   }
 }
@@ -125,20 +125,20 @@
 @-moz-keyframes terminal-blink {
   0%, 100% {
       background-color: #000;
-      color: #aaa;
+      color: #00B200;
   }
   50% {
-      background-color: #bbb;
+      background-color: #00B200;
       color: #000;
   }
 }
 @keyframes terminal-blink {
   0%, 100% {
       background-color: #000;
-      color: #aaa;
+      color: #00B200;
   }
   50% {
-      background-color: #bbb; /* not #aaa because it's seems there is Google Chrome bug */
+      background-color: #00B200; /* not #aaa because it's seems there is Google Chrome bug */
       color: #000;
   }
 }
@@ -154,7 +154,7 @@
 .terminal, .cmd {
     font-family: monospace;
     /*font-family: FreeMono, monospace; this don't work on Android */
-    color: #aaa;
+    color: #00B200;
     background-color: #000;
     font-size: 12px;
     line-height: 14px;
@@ -220,7 +220,7 @@
 .cmd div::-moz-selection,
 .cmd > span::-moz-selection,
 .cmd .prompt span::-moz-selection {
-    background-color: #aaa;
+    background-color: #00B200;
     color: #000;
 }
 /* this don't work in Chrome
@@ -245,7 +245,7 @@
 .cmd div::selection,
 .cmd > span::selection,
 .cmd .prompt span::selection {
-    background-color: #aaa;
+    background-color: #00B200;
     color: #000;
 }
 .terminal .terminal-output div.error, .terminal .terminal-output div.error div {
