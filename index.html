@@ -1,77 +1,48 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>My terminal Try One</title>
+        <title>
+            My terminal Try One
+        </title>
 
-        <script src="js/jquery-1.7.1.min.js"></script>
-        <script src="js/jquery.terminal-0.9.3.min.js"></script>
-        <script src="js/jquery.mousewheel-min.js"></script>
-        <link href="css/jquery.terminal-0.9.3.css" rel="stylesheet"/>
+        <!-- # Including Scripts-->
+            <script src="js/jquery-1.7.1.min.js"></script>
+            <script src="js/jquery.terminal-0.9.3.min.js"></script>
+            <script src="js/jquery.mousewheel-min.js"></script>        
+            <script src="js/myScript.js"></script>
+        <!-- Scripts inclusion end -->
 
-        <script type="text/javascript">
-            jQuery(function($, undefined) {
-
-                var
-                    commands 					= {
-                        'name' 					: {
-                            'display_value' 	: 'Vidur Khanna',
-                            'meaning' 			: 'will display my name'
-                            },
-                        'education' 			: {
-                            'display_value' 	: 'School - St. Theresa\'s Convent School, Karnal\nCollege - Computer Engineering, NIT Kurukshetra(2015)',
-                            'meaning' 			: 'will tell you about my education'
-                        },
-                        '10thmarks'             :{
-                            'display_value'     : '94%',
-                            'meaning'           : 'will tell you about my 10th standard\'s marks'
-                        },
-                        '12thmarks'             :{
-                            'display_value'     : '90.4%',
-                            'meaning'           : 'will tell you about my 12th standard\'s marks'
-                        }
-                    };
-
-                $('#term_demo').terminal(function(command, term){
-                    //list all commands
-                    if(command === 'man'){
-                        Object.keys(commands).forEach(function(key){
-                            term.echo("[" + key + "] - " + commands[key].meaning);
-                        });
-                    } else{
-                         if(commands.hasOwnProperty(command)){
-                        term.echo(commands[command].display_value);
-                        }else{
-                            if(command === '')
-                                term.echo('To see, Type');
-                            else
-                                term.echo('command `' + command + '` not found ... type `man` to see all available commands');
-                        }
-                    }
-                   
-                }, {
-                    greetings 	: 'Vidur Khanna',
-                    name 		: 'js_demo',
-                    prompt 		: 'VK> '
-                });
-
-            });
-        </script>
+        <!-- # Including Style Sheets-->
+            <link href="css/jquery.terminal-0.9.3.css" rel="stylesheet"/>
+            <link href="css/mySheet.css" rel="stylesheet"/>
+        <!-- Style Sheets inclusion end -->
     </head>
-    <body>
-        <table style="width:90%;height:90%;position:absolute;">
+    <body background="pics/mesh.jpg">
+        <table>
             <tbody>
                 <tr>
-                    <td style="width:50%;height:100%;position:absolute;">
-                        <div id ="term_demo" style="width:100%;height:100%;position:absolute;"></div>
+                    <td class="upper_half">
+                        <div id ="term_demo"></div>
                     </td>
-                    <td style="width:40%;height:100%;">
-                        <img src="pics/me.jpg" style="max-width:100%;max-height:100%;"/>
+                    <td class="upper_half" align="center">
+                        <img src="pics/me.jpg"/>
                     </td>
+                </tr>
+                <tr>
+                	<td colspan="2" id="note">
+                		[*] To list all the commands type `man`
+                	</td>
                 </tr>
             </tbody>
         </table>
-           
-            
-        
+
+        <footer>
+            <hr/>
+            Contact Details :
+            <a href="http://in.linkedin.com/in/vidurkhanna" target="_blank">[#] Linkedin</a>
+            <a href="http://www.github.com/khannavidur" target="_blank">[#] Github</a>
+            <a href="mailto:khannavidur93@gmail.com">[#] eMail</a>                               
+            [#] Mobile : +91-8130295974                        
+        </footer>
     </body>
 </html>
