@@ -1,14 +1,14 @@
 jQuery(function($, undefined) {
 
     var
-        commands 					= {
-            'name' 					: {
-                'display_value' 	: 'Vidur Khanna',
-                'meaning' 			: 'will display my name'
+        commands                    = {
+            'name'                  : {
+                'display_value'     : 'Vidur Khanna',
+                'meaning'           : 'will display my name'
                 },
-            'education' 			: {
-                'display_value' 	: 'School - St. Theresa\'s Convent School, Karnal\nCollege - Computer Engineering, NIT Kurukshetra(2015)',
-                'meaning' 			: 'will tell you about my education'
+            'education'             : {
+                'display_value'     : 'School - St. Theresa\'s Convent School, Karnal\nGraduation - Computer Engineering, NIT Kurukshetra(2015)',
+                'meaning'           : 'will tell you about my education'
             },
             '10thmarks'             :{
                 'display_value'     : '94%',
@@ -17,6 +17,10 @@ jQuery(function($, undefined) {
             '12thmarks'             :{
                 'display_value'     : '90.4%',
                 'meaning'           : 'will tell you about my 12th standard\'s marks'
+            },
+            'openSource'            :{
+                'display_value'     : ' - Elastic Search Wrapper​ for Node JS, under Paytm.\n - Binary Search for Tiny-range​ numbers with the nearest neighbours support, under Paytm.\n - MYSQL Wrapper ​for Node JS to provide ​Pagination​.\n - Found a ​bug in bootstrap ​and raised the issue with their team​.\n - Bash Script for ​Yoda Tongue ​utilizing Mashable API and then added it to the Jarvis, a Hubot for Paytm’s Slack​',
+                'meaning'           : 'will tell you about my open source contributions'
             }
         };
 
