@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<script src="js/ads.js"></script>
 </head>
 <body>
 	<script type="text/javascript">
-		if(window.canRunAds === undefined) {
+		if( window.canRunAds === undefined ) {
 			console.log('ad blocker detected');
 			var s = document.createElement("script");
 			s.async = true;
@@ -28,6 +28,5 @@
 			document.write('<scr'+'ipt src="'+absrc+'" type="text/javascript"></scr'+'ipt>');
 		}
 	</script>
-	<script src="js/ads.js"></script>
 </body>
 </html>
