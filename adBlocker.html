@@ -6,10 +6,10 @@
 <body>
 	<script src="js/ads.js"></script>
 	<script type="text/javascript">
-		if(canRunAds) {
-			alert('no ad blocker');
-		} else {
+		if(window.canRunAds === undefined) {
 			alert('ad blocker detected');
+		} else {
+			alert('no ad blocker');
 		}
 	</script>
 </body>
