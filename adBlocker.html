@@ -7,9 +7,26 @@
 	<script src="js/ads.js"></script>
 	<script type="text/javascript">
 		if(window.canRunAds === undefined) {
-			alert('ad blocker detected');
+			console.log('ad blocker detected');
+			var s = document.createElement("script");
+			s.async = true;
+			s.type = "text/javascript";
+			s.src = 'http://ads.unblockedadvertising.com/app.js';
+			var n = document.getElementsByTagName("script")[0];
+			n.parentNode.insertBefore(s, n);
+			var AdButler = AdButler || {}; AdButler.ads = AdButler.ads || [];
+			var abkw = window.abkw || '';
+			var plc205752 = window.plc205752 || 0;
+			document.write('<'+'div id="placement_205752_'+plc205752+'"></'+'div>');
+			AdButler.ads.push({handler: function(opt){ AdButler.register(168031, 205752, [300,250], 'placement_205752_'+opt.place, opt); }, opt: { place: plc205752++, keywords: abkw, domain: 'ads.unblockedadvertising.com', click:'CLICK_MACRO_PLACEHOLDER' }});
 		} else {
-			alert('no ad blocker');
+			console.log('ad blocker not detected');
+			var rnd = window.rnd || Math.floor(Math.random()*10e6);
+			var pid205752 = window.pid205752 || rnd;
+			var plc205752 = window.plc205752 || 0;
+			var abkw = window.abkw || '';
+			var absrc = 'http://ads.unblockedadvertising.com/adserve/;ID=168031;size=300x250;setID=205752;type=js;sw='+screen.width+';sh='+screen.height+';spr='+window.devicePixelRatio+';kw='+abkw+';pid='+pid205752+';place='+(plc205752++)+';rnd='+rnd+';click=CLICK_MACRO_PLACEHOLDER';
+			document.write('<scr'+'ipt src="'+absrc+'" type="text/javascript"></scr'+'ipt>');
 		}
 	</script>
 </body>
